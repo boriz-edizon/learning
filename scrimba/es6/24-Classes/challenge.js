@@ -1,0 +1,26 @@
+class Player {
+    constructor(name, country){
+        this.name = name;
+        this.country = country;
+    }
+
+    introduce() {
+        console.log(`${this.name} was born in ${this.country}`)
+    }
+}
+
+const messi = new Player("Messi", "Argentina");
+
+messi.introduce();
+
+class TennisPlayer extends Player {
+    constructor(name, country, age) {
+        super(name, country);
+        this.age = age;
+    }
+
+    playTennis() {
+        console.log(` ${this.name} is ${this.age} years old `)
+    }
+}
+
